@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
     $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
 
-    if ($_POST['name'] = 'admin' && md5($_POST['password']) == md5('12345')) {
+    if (($_POST['email'] = 'admin@admin') && (md5($_POST['password']) == md5('12345'))) {
         $user_type = 'admin';
     } else {
         $user_type = 'user';
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         } else {
             mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$cpass', '$user_type')") or die('query failed');
             $message[] = 'Registered successfully!';
-            header('location:login.php');
+            header('location:/what/sadFinal/home/login.php');
         }
     }
 }

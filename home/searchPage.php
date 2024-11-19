@@ -33,7 +33,7 @@ if (isset($_POST['add_to_cart'])) {
 <!-- Search Heading -->
 <div class="heading text-center my-5">
     <h3>Search Page</h3>
-    <p> <a href="index.php">Home</a> / Search </p>
+    <p> <a href="/what/sadFinal/index.php">Home</a> / Search </p>
 </div>
 
 <!-- Search Form Section -->

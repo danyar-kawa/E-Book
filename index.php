@@ -1,16 +1,16 @@
 <?php
-include('../includes/header.php');
+include('includes/header.php');
 session_start();
 
 // Check if the user is logged in
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 
-include('../includes/nav.php');
+include('includes/nav.php');
 
 if (isset($_POST['add_to_cart'])) {
     // If the user is not logged in, redirect them to the login page
     if (!$user_id) {
-        header('location:login.php');
+        header('location:home/login.php');
         exit();
     }
 
@@ -50,7 +50,7 @@ if (isset($message)) {
     <div class="container">
         <h1 class="display-4">Hand-Picked Books to Your Door</h1>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quod? Reiciendis ut porro iste totam.</p>
-        <a href="about.php" class="btn btn-primary">Discover More</a>
+        <a href="/what/sadFinal/home/about.php" class="btn btn-primary">Discover More</a>
     </div>
 </section>
 
@@ -65,7 +65,7 @@ if (isset($message)) {
             ?>
                     <div class="col-md-4">
                         <div class="card h-100 text-center">
-                            <img src="../uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
+                            <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $fetch_products['name']; ?></h5>
                                 <p class="card-text">$<?php echo $fetch_products['price']; ?></p>
@@ -87,7 +87,7 @@ if (isset($message)) {
             ?>
         </div>
         <div class="text-center mt-4">
-            <a href="shop.php" class="btn btn-outline-secondary">Load More</a>
+            <a href="/what/sadFinal/home/shop.php" class="btn btn-outline-secondary">Load More</a>
         </div>
     </div>
 </section>
@@ -101,7 +101,7 @@ if (isset($message)) {
             <div class="col-md-6">
                 <h3>About Us</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos enim minima ipsa dicta officia corporis ratione saepe sed adipisci?</p>
-                <a href="about.php" class="btn btn-primary">Read More</a>
+                <a href="/what/sadFinal/home/about.php" class="btn btn-primary">Read More</a>
             </div>
         </div>
     </div>
@@ -111,8 +111,8 @@ if (isset($message)) {
     <div class="container">
         <h3>Have Any Questions?</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cumque exercitationem repellendus, amet ullam voluptatibus?</p>
-        <a href="contact.php" class="btn btn-primary">Contact Us</a>
+        <a href="/what/sadFinal/home/contact.php" class="btn btn-primary">Contact Us</a>
     </div>
 </section>
 
-<?php include('../includes/footer.php'); ?>
+<?php include('includes/footer.php'); ?>

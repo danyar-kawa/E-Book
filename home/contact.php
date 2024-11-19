@@ -28,7 +28,7 @@ include '../includes/nav.php'; ?>
 <!-- Heading Section -->
 <div class="heading text-center py-5">
     <h3>Contact Us</h3>
-    <p><a href="index.php">Home</a> / Contact</p>
+    <p><a href="/what/sadFinal/index.php">Home</a> / Contact</p>
 </div>
 
 <!-- Contact Section -->

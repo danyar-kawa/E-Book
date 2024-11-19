@@ -3,7 +3,7 @@ include('../includes/connection.php');
 session_start();
 
 if (!isset($_SESSION['admin_id'])) {
-    header('location:login.php');
+    header('location:/what/sadFinal/home/login.php');
     exit();
 }
 ?>
@@ -31,12 +31,12 @@ if (!isset($_SESSION['admin_id'])) {
 
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="admin.php" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="adminProducts.php" class="nav-link">Products</a></li>
-                    <li class="nav-item"><a href="adminOrders.php" class="nav-link">Orders</a></li>
-                    <li class="nav-item"><a href="adminUsers.php" class="nav-link">Users</a></li>
-                    <li class="nav-item"><a href="adminContacts.php" class="nav-link">Messages</a></li>
-                    <li class="nav-item"><a href="../home/logout.php" class="nav-link">Logout</a></li>
+                    <li class="nav-item"><a href="/what/sadFinal/admin/admin.php" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/what/sadFinal/admin/adminProducts.php" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="/what/sadFinal/admin/adminOrders.php" class="nav-link">Orders</a></li>
+                    <li class="nav-item"><a href="/what/sadFinal/admin/adminUsers.php" class="nav-link">Users</a></li>
+                    <li class="nav-item"><a href="/what/sadFinal/admin/adminContacts.php" class="nav-link">Messages</a></li>
+                    <li class="nav-item"><a href="/what/sadFinal/home/logout.php" class="nav-link">Logout</a></li>
                 </ul>
             </nav>
 

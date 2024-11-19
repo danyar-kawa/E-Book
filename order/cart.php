@@ -5,7 +5,7 @@ include '../includes/header.php';
 $user_id = $_SESSION['user_id'];
 
 if (!isset($user_id)) {
-    header('location:../home/login.php');
+    header('location:/what/sadFinal/home/login.php');
 }
 
 if (isset($_POST['update_cart'])) {
@@ -18,12 +18,12 @@ if (isset($_POST['update_cart'])) {
 if (isset($_GET['delete'])) {
     $delete_id = $_GET['delete'];
     mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$delete_id'") or die('query failed');
-    header('location:cart.php');
+    header('location:/what/sadFinal/order/cart.php');
 }
 
 if (isset($_GET['delete_all'])) {
     mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
-    header('location:cart.php');
+    header('location:/what/sadFinal/order/cart.php');
 }
 
 ?>
@@ -55,7 +55,7 @@ if (isset($_GET['delete_all'])) {
                                     <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>" class="form-control mb-2">
                                     <button type="submit" name="update_cart" class="btn btn-primary btn-sm">Update</button>
                                 </form>
-                                <a href="cart.php?delete=<?php echo $fetch_cart['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Delete this item from the cart?');">Delete</a>
+                                <a href="/what/sadFinal/order/cart.php?delete=<?php echo $fetch_cart['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Delete this item from the cart?');">Delete</a>
                             </div>
                         </div>
                     </div>
@@ -69,13 +69,13 @@ if (isset($_GET['delete_all'])) {
         </div>
 
         <div class="text-center mt-4">
-            <a href="cart.php?delete_all" class="btn btn-danger <?php echo ($grand_total > 0) ? '' : 'disabled'; ?>" onclick="return confirm('Delete all items from the cart?');">Delete All</a>
+            <a href="/what/sadFinal/order/cart.php?delete_all" class="btn btn-danger <?php echo ($grand_total > 0) ? '' : 'disabled'; ?>" onclick="return confirm('Delete all items from the cart?');">Delete All</a>
         </div>
 
         <div class="text-center mt-4">
             <p>Grand Total: <strong>$<?php echo $grand_total; ?>/-</strong></p>
-            <a href="../home/shop.php" class="btn btn-secondary">Continue Shopping</a>
-            <a href="../order/checkout.php" class="btn btn-success <?php echo ($grand_total > 0) ? '' : 'disabled'; ?>">Proceed to Checkout</a>
+            <a href="/what/sadFinal/home/shop.php" class="btn btn-secondary">Continue Shopping</a>
+            <a href="/what/sadFinal/order/checkout.php" class="btn btn-success <?php echo ($grand_total > 0) ? '' : 'disabled'; ?>">Proceed to Checkout</a>
         </div>
 
     </section>

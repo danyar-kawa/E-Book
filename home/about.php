@@ -16,7 +16,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 <!-- Heading Section -->
 <div class="heading text-center py-5">
     <h3>About Us</h3>
-    <p> <a href="index.php">Home</a> / About </p>
+    <p> <a href="/what/sadFinal/index.php">Home</a> / About </p>
 </div>
 
 <!-- About Section -->
@@ -30,7 +30,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
                 <h3>Why Choose Us?</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet voluptatibus aut hic molestias, reiciendis natus fuga, cumque excepturi veniam ratione iure.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quos enim minima ipsa dicta officia corporis ratione saepe sed adipisci?</p>
-                <a href="contact.php" class="btn btn-primary">Contact Us</a>
+                <a href="/what/sadFinal/home/contact.php" class="btn btn-primary">Contact Us</a>
             </div>
         </div>
     </div>

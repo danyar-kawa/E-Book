@@ -6,7 +6,7 @@ include 'adminHeader.php';
 $admin_id = $_SESSION['admin_id'];
 
 if (!isset($admin_id)) {
-    header('location:login.php');
+    header('location:/what/sadFinal/home/login.php');
 }
 
 if (isset($_POST['update_order'])) {
@@ -20,7 +20,7 @@ if (isset($_POST['update_order'])) {
 if (isset($_GET['delete'])) {
     $delete_id = $_GET['delete'];
     mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$delete_id'") or die('query failed');
-    header('location:admin_orders.php');
+    header('location:/what/sadFinal/admin/admin_orders.php');
 }
 
 ?>
@@ -59,7 +59,7 @@ if (isset($_GET['delete'])) {
                                     <option value="completed">Completed</option>
                                 </select>
                                 <button type="submit" name="update_order" class="btn btn-primary">Update</button>
-                                <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('Delete this order?');" class="btn btn-danger">Delete</a>
+                                <a href="/what/sadFinal/admin/admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('Delete this order?');" class="btn btn-danger">Delete</a>
                             </form>
                         </div>
                     </div>

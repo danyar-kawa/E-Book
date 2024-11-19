@@ -5,13 +5,13 @@ include 'adminHeader.php';
 $admin_id = $_SESSION['admin_id'];
 
 if (!isset($admin_id)) {
-    header('location:login.php');
+    header('location:/what/sadFinal/home/login.php');
 };
 
 if (isset($_GET['delete'])) {
     $delete_id = $_GET['delete'];
     mysqli_query($conn, "DELETE FROM `message` WHERE id = '$delete_id'") or die('query failed');
-    header('location:admin_contacts.php');
+    header('location:/what/sadFinal/admin/admin_contacts.php');
 }
 
 ?>
@@ -37,7 +37,7 @@ if (isset($_GET['delete'])) {
                             <p><strong>Number:</strong> <?php echo $fetch_message['number']; ?></p>
                             <p><strong>Email:</strong> <?php echo $fetch_message['email']; ?></p>
                             <p><strong>Message:</strong> <span><?php echo $fetch_message['message']; ?></span></p>
-                            <a href="admin_contacts.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('Delete this message?');" class="btn btn-danger">Delete Message</a>
+                            <a href="/what/sadFinal/admin/admin_contacts.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('Delete this message?');" class="btn btn-danger">Delete Message</a>
                         </div>
                     </div>
                 </div>
