@@ -1,5 +1,5 @@
 <?php
-include('../includes/header.php');
+include('header.php');
 
 if (isset($_POST['submit'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         } else {
             mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$cpass', '$user_type')") or die('query failed');
             $message[] = 'Registered successfully!';
-            header('location:/what/sadFinal/home/login.php');
+            header('location:login.php');
         }
     }
 }
@@ -70,4 +70,4 @@ if (isset($message)) {
     </div>
 </div>
 
-<?php include('../includes/footer.php'); ?>
+<?php include('footer.php'); ?>

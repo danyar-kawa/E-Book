@@ -1,6 +1,6 @@
 <?php
 
-include '../includes/header.php';
+include 'header.php';
 
 session_start();
 
@@ -23,12 +23,12 @@ if (isset($_POST['send'])) {
         $message[] = 'message sent successfully!';
     }
 }
-include '../includes/nav.php'; ?>
+include 'nav.php'; ?>
 
 <!-- Heading Section -->
 <div class="heading text-center py-5">
     <h3>Contact Us</h3>
-    <p><a href="/what/sadFinal/index.php">Home</a> / Contact</p>
+    <p><a href="index.php">Home</a> / Contact</p>
 </div>
 
 <!-- Contact Section -->
@@ -55,4 +55,4 @@ include '../includes/nav.php'; ?>
     </div>
 </section>
 
-<?php include '../includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

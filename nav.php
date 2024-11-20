@@ -15,7 +15,7 @@ if (isset($message)) {
     <div class="container">
         <div class="d-flex justify-content-between align-items-center py-3">
             <!-- Logo -->
-            <a href="home.php" class="logo fs-2 text-white text-decoration-none">Bookly.</a>
+            <a href="index.php" class="logo fs-2 text-white text-decoration-none">Bookly.</a>
 
             <!-- Navbar -->
             <nav class="navbar navbar-expand-md">
@@ -25,19 +25,19 @@ if (isset($message)) {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/what/sadFinal/index.php">Home</a>
+                            <a class="nav-link text-white" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/what/sadFinal/home/about.php">About</a>
+                            <a class="nav-link text-white" href="about.php">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/what/sadFinal/home/shop.php">Shop</a>
+                            <a class="nav-link text-white" href="shop.php">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/what/sadFinal/home/contact.php">Contact</a>
+                            <a class="nav-link text-white" href="contact.php">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/what/sadFinal/home/orders.php">Orders</a>
+                            <a class="nav-link text-white" href="orders.php">Orders</a>
                         </li>
                     </ul>
                 </div>
@@ -45,13 +45,13 @@ if (isset($message)) {
 
             <!-- Icons -->
             <div class="icons d-flex">
-                <a href="/what/sadFinal/home/searchPage.php" class="fas fa-search text-white mx-2"></a>
+                <a href="searchPage.php" class="fas fa-search text-white mx-2"></a>
                 <a href="#" class="fas fa-user text-white mx-2" data-bs-toggle="modal" data-bs-target="#userModal"></a>
                 <?php
                 $select_cart_number = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
                 $cart_rows_number = mysqli_num_rows($select_cart_number);
                 ?>
-                <a href="/what/sadFinal/order/cart.php" class="text-white"><i class="fas fa-shopping-cart"></i> <span>(<?php echo $cart_rows_number; ?>)</span></a>
+                <a href="cart.php" class="text-white"><i class="fas fa-shopping-cart"></i> <span>(<?php echo $cart_rows_number; ?>)</span></a>
             </div>
         </div>
     </div>
@@ -68,8 +68,8 @@ if (isset($message)) {
             <div class="modal-body"><?php if (isset($_SESSION['user_id'])) { ?>
                     <p><strong>Username:</strong> <?php echo $_SESSION['user_name']; ?></p>
                     <p><strong>Email:</strong> <?php echo $_SESSION['user_email']; ?></p>
-                    <a href="/what/sadFinal/home/logout.php" class="btn btn-danger w-100">Logout</a><?php } else { ?>
-                    <a class="nav-link btn-primary text-light text-center" href="/what/sadFinal/home/login.php">Login</a>
+                    <a href="logout.php" class="btn btn-danger w-100">Logout</a><?php } else { ?>
+                    <a class="nav-link btn-primary text-light text-center" href="login.php">Login</a>
                 <?php }  ?>
             </div>
         </div>

@@ -7,10 +7,10 @@
             <div class="col-md-3 mb-4">
                 <h3 class="text-uppercase">Quick Links</h3>
                 <ul class="list-unstyled">
-                    <li><a href="/what/sadFinal/index.php" class="text-white text-decoration-none">Home</a></li>
-                    <li><a href="/what/sadFinal/home/about.php" class="text-white text-decoration-none">About</a></li>
-                    <li><a href="/what/sadFinal/home/shop.php" class="text-white text-decoration-none">Shop</a></li>
-                    <li><a href="/what/sadFinal/home/contact.php" class="text-white text-decoration-none">Contact</a></li>
+                    <li><a href="index.php" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="about.php" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="shop.php" class="text-white text-decoration-none">Shop</a></li>
+                    <li><a href="contact.php" class="text-white text-decoration-none">Contact</a></li>
                 </ul>
             </div>
 
@@ -18,10 +18,10 @@
             <div class="col-md-3 mb-4">
                 <h3 class="text-uppercase">Extra Links</h3>
                 <ul class="list-unstyled">
-                    <li><a href="/what/sadFinal/home/login.php" class="text-white text-decoration-none">Login</a></li>
-                    <li><a href="/what/sadFinal/home/register.php" class="text-white text-decoration-none">Register</a></li>
-                    <li><a href="/what/sadFinal/order/cart.php" class="text-white text-decoration-none">Cart</a></li>
-                    <li><a href="/what/sadFinal/home/orders.php" class="text-white text-decoration-none">Orders</a></li>
+                    <li><a href="login.php" class="text-white text-decoration-none">Login</a></li>
+                    <li><a href="register.php" class="text-white text-decoration-none">Register</a></li>
+                    <li><a href="cart.php" class="text-white text-decoration-none">Cart</a></li>
+                    <li><a href="orders.php" class="text-white text-decoration-none">Orders</a></li>
                 </ul>
             </div>
 

@@ -4,7 +4,7 @@ include 'adminHeader.php'; // Include the header file to make use of the navigat
 
 $admin_id = $_SESSION['admin_id'];
 if (!isset($admin_id)) {
-    header('location:/what/sadFinal/home/login.php');
+    header('location:login.php');
     exit();
 }
 

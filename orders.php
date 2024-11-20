@@ -1,17 +1,17 @@
 <?php
 
-include '../includes/header.php';
+include 'header.php';
 
 session_start();
 
 // Check if the user is logged in
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
-include '../includes/nav.php'; ?>
+include 'nav.php'; ?>
 
 <!-- Heading Section -->
 <div class="heading text-center py-5">
     <h3>Your Orders</h3>
-    <p><a href="/what/sadFinal/index.php">Home</a> / Orders</p>
+    <p><a href="index.php">Home</a> / Orders</p>
 </div>
 
 <!-- Orders Section -->
@@ -60,4 +60,4 @@ include '../includes/nav.php'; ?>
     </div>
 </section>
 
-<?php include '../includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

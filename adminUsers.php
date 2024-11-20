@@ -6,13 +6,13 @@ include 'adminHeader.php';
 $admin_id = $_SESSION['admin_id'];
 
 if (!isset($admin_id)) {
-    header('location:/what/sadFinal/home/login.php');
+    header('location:login.php');
 }
 
 if (isset($_GET['delete'])) {
     $delete_id = $_GET['delete'];
     mysqli_query($conn, "DELETE FROM `users` WHERE id = '$delete_id'") or die('query failed');
-    header('location:/what/sadFinal/admin/adminUsers.php');
+    header('location:adminUsers.php');
 }
 
 ?>
@@ -38,7 +38,7 @@ if (isset($_GET['delete'])) {
                         <p><strong>User Type:</strong> <span style="color:<?php if ($fetch_users['user_type'] == 'admin') {
                                                                                 echo 'var(--orange)';
                                                                             } ?>"><?php echo $fetch_users['user_type']; ?></span></p>
-                        <a href="/what/sadFinal/admin/adminUsers.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('Delete this user?');" class="btn btn-danger">Delete User</a>
+                        <a href="adminUsers.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('Delete this user?');" class="btn btn-danger">Delete User</a>
                     </div>
                 </div>
             </div>

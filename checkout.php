@@ -1,12 +1,12 @@
 <?php
 
-include '../includes/header.php';
+include 'header.php';
 session_start();
 
 $user_id = $_SESSION['user_id'];
 
 if (!isset($user_id)) {
-    header('location:/what/sadFinal/home/login.php');
+    header('location:login.php');
 }
 
 if (isset($_POST['order_btn'])) {
@@ -52,7 +52,7 @@ if (isset($_POST['order_btn'])) {
 <div class="container mt-5">
     <div class="text-center">
         <h3>Checkout</h3>
-        <p><a href="/what/sadFinal/index.php">Home</a> / Checkout</p>
+        <p><a href="index.php">Home</a> / Checkout</p>
     </div>
 
     <section class="display-order my-4">
@@ -132,4 +132,4 @@ if (isset($_POST['order_btn'])) {
 
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include 'footer.php'; ?>

@@ -4,7 +4,7 @@ include 'adminHeader.php';
 $admin_id = $_SESSION['admin_id'];
 
 if (!isset($admin_id)) {
-    header('location:/what/sadFinal/home/login.php');
+    header('location:login.php');
 }
 
 // Adding a product
@@ -50,7 +50,7 @@ if (isset($_GET['delete'])) {
     unlink('../uploaded_img/' . $fetch_delete_image['image']);
     unlink('../uploaded_pdf/' . $fetch_delete_image['pdf']);
     mysqli_query($conn, "DELETE FROM `products` WHERE id = '$delete_id'") or die('query failed');
-    header('location:/what/sadFinal/admin/adminProducts.php');
+    header('location:adminProducts.php');
 }
 
 // Updating a product
@@ -98,7 +98,7 @@ if (isset($_POST['update_product'])) {
         }
     }
 
-    header('location:/what/sadFinal/admin/adminProducts.php');
+    header('location:adminProducts.php');
 }
 ?>
 <!-- Product CRUD Section Starts -->
@@ -156,8 +156,8 @@ if (isset($_POST['update_product'])) {
                             <h5 class="card-title"><?php echo $fetch_products['name']; ?></h5>
                             <p class="card-text">$<?php echo $fetch_products['price']; ?>/-</p>
                             <a href="../uploaded_pdf/<?php echo $fetch_products['pdf']; ?>" class="btn btn-success" download>Download PDF</a>
-                            <a href="/what/sadFinal/admin/adminProducts.php?update=<?php echo $fetch_products['id']; ?>" class="btn btn-warning">Update</a>
-                            <a href="/what/sadFinal/admin/adminProducts.php?delete=<?php echo $fetch_products['id']; ?>" class="btn btn-danger" onclick="return confirm('Delete this product?');">Delete</a>
+                            <a href="adminProducts.php?update=<?php echo $fetch_products['id']; ?>" class="btn btn-warning">Update</a>
+                            <a href="adminProducts.php?delete=<?php echo $fetch_products['id']; ?>" class="btn btn-danger" onclick="return confirm('Delete this product?');">Delete</a>
                         </div>
                     </div>
                 </div>
