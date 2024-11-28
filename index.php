@@ -74,6 +74,7 @@ if (isset($message)) {
                                     <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
                                     <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
                                     <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
+                                    <a href="uploaded_pdf/<?php echo $fetch_products['pdf']; ?>" class="btn btn-success" download>Download PDF</a>
                                     <button type="submit" name="add_to_cart" class="btn btn-outline-primary btn-block">Add to Cart</button>
                                 </form>
                             </div>

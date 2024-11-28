@@ -151,11 +151,11 @@ if (isset($_POST['update_product'])) {
         ?>
                 <div class="col-md-3 mb-4">
                     <div class="card">
-                        <img src="../uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
+                        <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="card-img-top" alt="Product Image">
                         <div class="card-body text-center">
                             <h5 class="card-title"><?php echo $fetch_products['name']; ?></h5>
                             <p class="card-text">$<?php echo $fetch_products['price']; ?>/-</p>
-                            <a href="../uploaded_pdf/<?php echo $fetch_products['pdf']; ?>" class="btn btn-success" download>Download PDF</a>
+                            <a href="uploaded_pdf/<?php echo $fetch_products['pdf']; ?>" class="btn btn-success" download>Download PDF</a>
                             <a href="adminProducts.php?update=<?php echo $fetch_products['id']; ?>" class="btn btn-warning">Update</a>
                             <a href="adminProducts.php?delete=<?php echo $fetch_products['id']; ?>" class="btn btn-danger" onclick="return confirm('Delete this product?');">Delete</a>
                         </div>
